@@ -1,0 +1,47 @@
+/**
+ * @name No Titlebar (Discord Classic)
+ * @author KayoticCarnige
+ * @authorId 634168893644210186
+ * @authorLink https://github.com/kckarnige/notitlebar-theme
+ * @version 1.0.0
+ * @description A (sorta) blast from the past
+ * @donate https://ko-fi.com/kckarnige
+ * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
+**/
+
+[class*="withFrame-"][class*="titleBar-"] {
+    height: 0%;
+    margin-top: 0px;
+}
+[class*="withFrame-"][class*="titleBar-"] > [class*="wordmark-"] {
+    display: none;
+}
+[class*="withFrame-"][class*="titleBar-"] > [class*="winButton-"] {
+    width: 40px;
+    height: 52px;
+    z-index: 100;
+}
+[class*="upperContainer-"] > [class*="toolbar-"] {
+    transform: translateX(-120px);
+}
+.platform-win [class*="scroller-3X7KbA"],
+.platform-linux [class*="scroller-3X7KbA"] {
+    padding-top: 12px;
+}
+[class*="standardSidebarView-"] [class*="contentRegion-"] [class*="contentRegionScroller-"] {
+    margin-top: 48px;
+}
+[class*="standardSidebarView-"] [class*="contentColumnDefault-"],
+[class*="standardSidebarView-"] [class*="contentColumnWide-"] {
+    padding: 20px 40px 80px;
+}
+[class*="title-"][class*="container-"][class*="themed-"]:before {
+    width: calc(100% - 128px);
+    height: 100%;
+    background: transparent;
+    opacity: .2;
+    content: " ";
+    -webkit-app-region: drag;
+    pointer-events: none;
+    position: absolute;
+}
