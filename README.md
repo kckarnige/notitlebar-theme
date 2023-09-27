@@ -12,4 +12,4 @@
     <img width="60%" src="image.png"></img>
 </p>
 
-<h3 align="center"><a href="https://github.com/kckarnige/notitlebar-theme/blob/main/classicTitlebar.theme.css">Download</a></h3>
+<h3 align="center"><a href="https://github.com/kckarnige/notitlebar-theme/blob/main/classicTitlebar.theme.css">[ [ [ Download ] ] ]</a></h3>
