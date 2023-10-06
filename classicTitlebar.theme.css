@@ -3,7 +3,7 @@
  * @author KayoticCarnige
  * @authorId 634168893644210186
  * @authorLink https://github.com/kckarnige/notitlebar-theme
- * @version 1.0.1
+ * @version 1.0.2
  * @description A (sorta) blast from the past
  * @donate https://ko-fi.com/kckarnige
  * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
@@ -22,7 +22,7 @@
     z-index: 100;
 }
 [class*="upperContainer-"] > [class*="toolbar-"] {
-    transform: translateX(-120px);
+    padding-right: 120px;
 }
 .platform-win [class*="scroller-3X7KbA"],
 .platform-linux [class*="scroller-3X7KbA"] {
