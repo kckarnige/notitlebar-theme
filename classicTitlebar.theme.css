@@ -3,7 +3,7 @@
  * @author KayoticCarnige
  * @authorId 634168893644210186
  * @authorLink https://github.com/kckarnige/notitlebar-theme
- * @version 1.0.0
+ * @version 1.0.1
  * @description A (sorta) blast from the past
  * @donate https://ko-fi.com/kckarnige
  * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
@@ -35,7 +35,9 @@
 [class*="standardSidebarView-"] [class*="contentColumnWide-"] {
     padding: 20px 40px 80px;
 }
-[class*="title-"][class*="container-"][class*="themed-"]:before {
+[class*="title-"][class*="container-"][class*="themed-"]:before,
+[class*="header-"][class*="container-"][class*="themed-"]:before,
+[class*="container-"][class*="themed-"].theme-dark:before {
     width: calc(100% - 128px);
     height: 100%;
     background: transparent;
