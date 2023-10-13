@@ -8,11 +8,11 @@
 
 <blockquote>
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="macnt-dark.png" width="14px">
-    <img alt="iCon" src="macnt.png" width="14px">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
+    <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
   </picture> Mac not supported. <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="macnt-dark.png" width="14px">
-    <img alt="iCon" src="macnt.png" width="14px">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
+    <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
   </picture>
 </blockquote>
 <br>
