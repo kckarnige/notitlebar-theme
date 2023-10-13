@@ -8,13 +8,13 @@
 
 <div align="center">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
-        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
+        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
     </picture> 
     <a><i>Mac not supported.</i></a>
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
-        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
+        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
     </picture>
 </div>
 
