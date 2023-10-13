@@ -11,7 +11,7 @@
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
         <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
     </picture> 
-    <a><i>Mac not supported.</i></a>
+    <i>Mac not supported.</i>
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
         <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
@@ -20,7 +20,9 @@
 
 <br>
 
-> This theme has been tested on [Vesktop](https://github.com/Vencord/Vesktop/), and should be compatible with [BetterDiscord](https://betterdiscord.app)
+<div align="center">
+    This theme has been tested on <a href="https://github.com/Vencord/Vesktop/">Vesktop</a>, and should be compatible with <a href="https://betterdiscord.app">BetterDiscord</a>.
+</div>
 
 <br>
 
