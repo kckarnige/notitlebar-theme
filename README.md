@@ -6,18 +6,21 @@
 
 <br>
 
-<blockquote>
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
-    <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
-  </picture> Mac not supported. <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
-    <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
-  </picture>
-</blockquote>
+<div align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
+        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
+    </picture> 
+    <a><i>Mac not supported.</i></a>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
+        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
+    </picture>
+</div>
+
 <br>
 
-> _This theme has been tested on [Vesktop](https://github.com/Vencord/Vesktop/), and should be compatible with [BetterDiscord](https://betterdiscord.app)_
+> This theme has been tested on [Vesktop](https://github.com/Vencord/Vesktop/), and should be compatible with [BetterDiscord](https://betterdiscord.app)
 
 <br>
 
