@@ -6,11 +6,18 @@
 
 <br>
 
-> <img width="14px" src="macnt.png"></img> Mac not supported. <img width="14px" src="macnt.png"></img>
-
+<blockquote>
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="macnt-dark.png" width="14px">
+    <img alt="iCon" src="macnt.png" width="14px">
+  </picture> Mac not supported. <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="macnt-dark.png" width="14px">
+    <img alt="iCon" src="macnt.png" width="14px">
+  </picture>
+</blockquote>
 <br>
 
-> *This theme has been tested on [Vesktop](https://github.com/Vencord/Vesktop/), and should be compatible with [BetterDiscord](https://betterdiscord.app)*
+> _This theme has been tested on [Vesktop](https://github.com/Vencord/Vesktop/), and should be compatible with [BetterDiscord](https://betterdiscord.app)_
 
 <br>
 
