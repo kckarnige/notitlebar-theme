@@ -29,6 +29,9 @@
 .platform-linux [class*="scroller-3X7KbA"] {
     padding-top: 12px;
 }
+[class*="content-"] [class*="sidebar-"] {
+    border-radius: 0;
+}
 [class*="standardSidebarView-"] [class*="contentRegion-"] [class*="contentRegionScroller-"] {
     margin-top: 48px;
 }
