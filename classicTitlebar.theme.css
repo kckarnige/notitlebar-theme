@@ -4,44 +4,44 @@
  * @authorId 634168893644210186
  * @authorLink https://github.com/kckarnige
  * @website https://github.com/kckarnige/notitlebar-theme
- * @version 1.0.2
+ * @version 1.0.3
  * @description A (sorta) blast from the past
  * @donate https://ko-fi.com/kckarnige
  * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
 **/
 
-[class*="withFrame-"][class*="titleBar-"] {
+[class*="withFrame_"][class*="titleBar_"] {
     height: 0%;
     margin-top: 0px;
 }
-[class*="withFrame-"][class*="titleBar-"] > [class*="wordmark-"] {
+[class*="withFrame_"][class*="titleBar_"] > [class*="wordmark_"] {
     display: none;
 }
-[class*="withFrame-"][class*="titleBar-"] > [class*="winButton-"] {
+[class*="withFrame_"][class*="titleBar_"] > [class*="winButton_"] {
     width: 40px;
     height: 52px;
     z-index: 100;
 }
-[class*="upperContainer-"] > [class*="toolbar-"] {
+[class*="upperContainer_"] > [class*="toolbar_"] {
     padding-right: 120px;
 }
 .platform-win [class*="scroller-3X7KbA"],
 .platform-linux [class*="scroller-3X7KbA"] {
     padding-top: 12px;
 }
-[class*="content-"] [class*="sidebar-"] {
+[class*="content_"] [class*="sidebar_"] {
     border-radius: 0;
 }
-[class*="standardSidebarView-"] [class*="contentRegion-"] [class*="contentRegionScroller-"] {
+[class*="standardSidebarView_"] [class*="contentRegion_"] [class*="contentRegionScroller_"] {
     margin-top: 48px;
 }
-[class*="standardSidebarView-"] [class*="contentColumnDefault-"],
-[class*="standardSidebarView-"] [class*="contentColumnWide-"] {
+[class*="standardSidebarView_"] [class*="contentColumnDefault_"],
+[class*="standardSidebarView_"] [class*="contentColumnWide_"] {
     padding: 20px 40px 80px;
 }
-[class*="title-"][class*="container-"][class*="themed-"]:before,
-[class*="header-"][class*="container-"][class*="themed-"]:before,
-[class*="container-"][class*="themed-"].theme-dark:before {
+[class*="title_"][class*="container_"][class*="themed_"]:before,
+[class*="header_"][class*="container_"][class*="themed_"]:before,
+[class*="container_"][class*="themed_"].theme-dark:before {
     width: calc(100% - 128px);
     height: 100%;
     background: transparent;
