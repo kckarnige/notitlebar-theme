@@ -4,7 +4,7 @@
  * @authorId 634168893644210186
  * @authorLink https://github.com/kckarnige
  * @website https://github.com/kckarnige/notitlebar-theme
- * @version 1.0.3
+ * @version 1.0.4
  * @description A (sorta) blast from the past
  * @donate https://ko-fi.com/kckarnige
  * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
@@ -31,9 +31,6 @@
 }
 [class*="content_"] [class*="sidebar_"] {
     border-radius: 0;
-}
-[class*="standardSidebarView_"] [class*="contentRegion_"] [class*="contentRegionScroller_"] {
-    margin-top: 48px;
 }
 [class*="standardSidebarView_"] [class*="contentColumnDefault_"],
 [class*="standardSidebarView_"] [class*="contentColumnWide_"] {
