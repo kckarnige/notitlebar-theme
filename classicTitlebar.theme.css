@@ -1,10 +1,10 @@
 /**
- * @name No Titlebar (Discord Classic)
+ * @name No Titlebar
  * @author KayoticCarnige
  * @authorId 634168893644210186
  * @authorLink https://github.com/kckarnige
  * @website https://github.com/kckarnige/notitlebar-theme
- * @version 1.0.4
+ * @version 1.0.5
  * @description A (sorta) blast from the past
  * @donate https://ko-fi.com/kckarnige
  * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
@@ -22,11 +22,14 @@
     height: 52px;
     z-index: 100;
 }
+[class*="standardSidebarView_"] [class*="contentRegion_"] [class*="contentRegionScroller_"] {
+    padding-top: 42px;
+}
 [class*="upperContainer_"] > [class*="toolbar_"] {
     padding-right: 120px;
 }
-.platform-win [class*="scroller-3X7KbA"],
-.platform-linux [class*="scroller-3X7KbA"] {
+.platform-win nav[class*="guilds_"] [class*="scroller_"],
+.platform-linux nav[class*="guilds_"] [class*="scroller_"] {
     padding-top: 12px;
 }
 [class*="content_"] [class*="sidebar_"] {
@@ -36,11 +39,9 @@
 [class*="standardSidebarView_"] [class*="contentColumnWide_"] {
     padding: 20px 40px 80px;
 }
-[class*="title_"][class*="container_"][class*="themed_"]:before,
-[class*="header_"][class*="container_"][class*="themed_"]:before,
-[class*="container_"][class*="themed_"].theme-dark:before {
-    width: calc(100% - 128px);
-    height: 100%;
+[class*="withFrame_"][class*="titleBar_"]:before {
+    width: calc(100vw - 312px);
+    height: 48px;
     background: transparent;
     opacity: .2;
     content: " ";
