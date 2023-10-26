@@ -49,3 +49,14 @@
     pointer-events: none;
     position: absolute;
 }
+[class*="notice_"] {
+    height: 48px;
+    line-height: 48px;
+}
+[class*="notice_"] [class*="button_"] {
+    top: 12px;
+}
+[class*="notice_"] [class*="closeButton_"] {
+    top: 5px;
+    margin-right: 280px;
+}
