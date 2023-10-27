@@ -21,7 +21,7 @@
 <br>
 
 <div align="center">
-    This theme has been tested on <a href="https://github.com/Vencord/Vesktop/">Vesktop</a>, and should be compatible with <a href="https://betterdiscord.app">BetterDiscord</a>.
+    This theme has been tested on <a href="https://github.com/Vencord/Vesktop/">Vesktop</a> and <a href="https://betterdiscord.app">BetterDiscord</a>.
 </div>
 
 <br>
