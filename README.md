@@ -8,13 +8,13 @@
 
 <p align="center">Obligatory Theme Import Code:</p>
 
-```css
+<pre lang="css">
 @import ("https://kckarnige.github.io/notitlebar-theme/classicTitlebar.theme.css");
-```
+</pre>
 
 <div align="center">
 <div align="center">
-    !!
+    <i><b>!!</b></i>
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
         <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
@@ -24,7 +24,7 @@
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="14px">
         <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="14px">
     </picture>
-    !!
+    <i><b>!!</b></i>
 </div>
     <p>This theme has been tested on <a href="https://github.com/Vencord/Vesktop/">Vesktop</a> and <a href="https://betterdiscord.app">BetterDiscord</a>.</p>
     <p>I recommend pairing this with the <a href="https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/SettingsModal">SettingsModal</a> theme addon.</p>
