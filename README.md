@@ -21,7 +21,8 @@
 <br>
 
 <div align="center">
-    This theme has been tested on <a href="https://github.com/Vencord/Vesktop/">Vesktop</a> and <a href="https://betterdiscord.app">BetterDiscord</a>.
+    <p>This theme has been tested on <a href="https://github.com/Vencord/Vesktop/">Vesktop</a> and <a href="https://betterdiscord.app">BetterDiscord</a>.</p>
+    <p>I recommend pairing this with the <a href="https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/SettingsModal">SettingsModal</a> theme addon.</p>
 </div>
 
 <br>
