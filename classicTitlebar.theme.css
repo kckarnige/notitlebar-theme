@@ -52,6 +52,10 @@
     pointer-events: none;
     position: absolute;
 }
+[class*="topicClickTarget_"],
+[class*="notice_"] button {
+    -webkit-app-region: none;
+}
 [class*="notice_"] {
     height: 48px;
     line-height: 48px;
@@ -65,7 +69,6 @@
 }
 [class*="notice_"] button {
     transform: translateY(-12px);
-    -webkit-app-region: none;
 }
 [class*="notice_"] button[class*="back_"] {
     transform: translateY(-6px);
