@@ -4,7 +4,7 @@
  * @authorId 634168893644210186
  * @authorLink https://github.com/kckarnige
  * @website https://github.com/kckarnige/notitlebar-theme
- * @version 1.0.5
+ * @version 1.0.6
  * @description A (sorta) blast from the past
  * @donate https://www.buymeacoffee.com/kckarnige
  * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
@@ -25,8 +25,11 @@
     height: 52px;
     z-index: 100;
 }
+[class*="sidebarRegionScroller_"] {
+    padding-top: 14px;
+}
 [class*="standardSidebarView_"] [class*="contentRegion_"] [class*="contentRegionScroller_"] {
-    padding-top: 42px;
+    padding-top: 18px;
 }
 [class*="upperContainer_"] > [class*="toolbar_"] {
     padding-right: 120px;
