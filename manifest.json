@@ -11,8 +11,8 @@
     ],
     "version": "1.0.7",
     "updater": {
-      "type": "github",
-      "id": "kckarnige/notitlebar-theme"
+      "type": "store",
+      "id": "com.kckarnige.classicTitlebar"
     },
     "license": "MIT",
     "type": "replugged-theme",
