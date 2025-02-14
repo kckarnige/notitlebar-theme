@@ -1,24 +1,24 @@
 {
-    "id": "com.kckarnige.classicTitlebar",
-    "name": "No Titlebar",
-    "description": "A (sorta) blast from the past.",
-    "author": [
-      {
-        "name": "KCK",
-        "discordID": "634168893644210186",
-        "github": "kckarnige"
-      }
-    ],
-    "version": "1.0.7",
-    "updater": {
-      "type": "store",
-      "id": "com.kckarnige.classicTitlebar"
-    },
-    "license": "MIT",
-    "type": "replugged-theme",
-    "main": "classicTitlebar.theme.css",
-    "source": "https://github.com/kckarnige/notitlebar-theme",
-    "image": [
-      "https://i.imgur.com/eQTxT3K.png"
-    ]
-  }
+  "id": "com.kckarnige.classicTitlebar",
+  "name": "No Titlebar",
+  "description": "A (sorta) blast from the past.",
+  "author": [
+    {
+      "name": "KCK",
+      "discordID": "634168893644210186",
+      "github": "kckarnige"
+    }
+  ],
+  "version": "1.0.7",
+  "updater": {
+    "type": "store",
+    "id": "com.kckarnige.classicTitlebar"
+  },
+  "license": "MIT",
+  "type": "replugged-theme",
+  "main": "classicTitlebar.theme.css",
+  "source": "https://github.com/kckarnige/notitlebar-theme",
+  "image": [
+    "https://i.imgur.com/eQTxT3K.png"
+  ]
+}
