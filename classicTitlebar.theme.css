@@ -7,7 +7,7 @@
  * @version 1.0.7
  * @description A (sorta) blast from the past.
  * @donate https://ko-fi.com/kckarnige
- * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
+ * @updateUrl https://raw.githubusercontent.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
 **/
 .platform-win:not(:has([legcord-platform])) nav[class*=guilds_] [class*=scroller_],
 .platform-linux:not(:has([legcord-platform])) nav[class*=guilds_] [class*=scroller_] {
