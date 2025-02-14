@@ -1,0 +1,95 @@
+/**
+ * @name No Titlebar
+ * @author KCK
+ * @authorId 634168893644210186
+ * @authorLink https://github.com/kckarnige
+ * @website https://github.com/kckarnige/notitlebar-theme
+ * @version 1.0.7
+ * @description A (sorta) blast from the past.
+ * @donate https://ko-fi.com/kckarnige
+ * @updateUrl https://raw.githack.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
+**/
+
+.platform-win,
+.platform-linux {
+    &:not(:has([legcord-platform])) {
+
+        nav[class*="guilds_"] [class*="scroller_"] {
+            padding-top: 12px;
+        }
+
+        [class*="withFrame_"][class*="titleBar_"] {
+            height: 0%;
+            margin-top: 0px;
+            position: absolute;
+            right: 0;
+            float: right;
+
+            >[class*="wordmark_"] {
+                display: none;
+            }
+
+            >[class*="winButton_"] {
+                width: 40px;
+                height: 52px;
+                z-index: 100;
+            }
+
+            &:before {
+                width: calc(100vw - 312px);
+                height: 48px;
+                background: transparent;
+                opacity: .2;
+                content: " ";
+                -webkit-app-region: drag;
+                pointer-events: none;
+                position: absolute;
+            }
+        }
+        
+        [class*="content_"] [class*="sidebar_"] {
+            border-radius: 0;
+        }
+        
+        [class*="standardSidebarView_"] {
+            [class*="contentColumnDefault_"],
+            [class*="contentColumnWide_"] {
+                padding: 20px 40px 80px;
+            }
+        }
+        
+        
+        [class*="topicClickTarget_"],
+        [class*="notice_"] {
+            height: 48px;
+            line-height: 48px;
+            button {
+                -webkit-app-region: none;
+                transform: translateY(-12px);
+                margin-top: 12px;
+                top: 12px;
+                margin-bottom: 12px;
+                bottom: 12px;
+                &[class*="back_"] {
+                    transform: translateY(-6px);
+                }
+            }
+            [class*="closeButton_"] {
+                top: 5px;
+                margin-right: 280px;
+            }
+        }
+        
+        [class*="sidebarRegionScroller_"] {
+            padding-top: 14px;
+        }
+        
+        [class*="standardSidebarView_"] [class*="contentRegion_"] [class*="contentRegionScroller_"] {
+            padding-top: 18px;
+        }
+        
+        [class*="upperContainer_"]>[class*="toolbar_"] {
+            padding-right: 120px;
+        }
+    }
+}
