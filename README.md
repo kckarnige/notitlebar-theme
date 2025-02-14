@@ -48,4 +48,4 @@
 <h3 align="center"><a href="https://github.com/kckarnige/notitlebar-theme/blob/main/classicTitlebar.theme.css">Theme Download</a></h3>
 
 
-<h3 align="center"><a href="https://replugged.dev/install?identifier=kckarnige/notitlebar-theme&source=github">Replugged Theme Install</a></h3>
+<h3 align="center"><a href="https://replugged.dev/install?identifier=com.kckarnige.classicTitlebar">Replugged Theme Install</a></h3>
