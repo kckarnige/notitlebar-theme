@@ -8,29 +8,27 @@
     <img width="60%" src="preview.png"></img>
 </p>
 
----
-
 ### Obligatory Theme Import:
 
 <pre lang="css">
     @import ("https://kckarnige.github.io/notitlebar-theme/classicTitlebar.theme.css");
 </pre>
 
-<h2>
+<h3>
     <i><b>!!</b></i>
     <picture>
         <source media="(prefers-color-scheme: dark)"
-            srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="18px">
-        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="18px">
+            srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="16px">
+        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="16px">
     </picture>
     <i>Mac not supported.</i>
     <picture>
         <source media="(prefers-color-scheme: dark)"
-            srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="18px">
-        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="18px">
+            srcset="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt.png" width="16px">
+        <img alt="iCon" src="https://raw.githack.com/kckarnige/notitlebar-theme/main/macnt-dark.png" width="16px">
     </picture>
     <i><b>!!</b></i>
-</h2>
+</h3>
 
 This theme has been tested on [Vesktop](https://github.com/Vencord/Vesktop/), [Equibop](https://github.com/Equicord/Equibop), [BetterDiscord](https://github.com/BetterDiscord/BetterDiscord), and [Replugged](https://github.com/replugged-org/replugged).
 
