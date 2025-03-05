@@ -33,7 +33,7 @@
 }
 .platform-win:not(:has([legcord-platform])) [class*=withFrame_][class*=titleBar_]:before,
 .platform-linux:not(:has([legcord-platform])) [class*=withFrame_][class*=titleBar_]:before {
-  width: calc(100vw - 312px);
+  width: calc(100vw - 384px);
   height: 48px;
   background: transparent;
   opacity: 0.2;
@@ -94,4 +94,9 @@
 .platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_] {
   padding-right: 120px;
+}
+.platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=children_] [type*=button], .platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=children_] [role*=button],
+.platform-linux:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=children_] [type*=button],
+.platform-linux:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=children_] [role*=button] {
+  -webkit-app-region: no-drag;
 }/*# sourceMappingURL=classicTitlebar.theme.css.map */

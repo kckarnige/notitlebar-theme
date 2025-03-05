@@ -36,7 +36,7 @@
             }
 
             &:before {
-                width: calc(100vw - 312px);
+                width: calc(100vw - 384px);
                 height: 48px;
                 background: transparent;
                 opacity: .2;
@@ -88,8 +88,15 @@
             padding-top: 18px;
         }
         
-        [class*="upperContainer_"]>[class*="toolbar_"] {
-            padding-right: 120px;
+        [class*="upperContainer_"] {
+            &>[class*="toolbar_"] {
+                padding-right: 120px;
+            }
+            &>[class*="children_"] {
+                [type*="button"], [role*="button"] {
+                    -webkit-app-region: no-drag;
+                }
+            }
         }
     }
 }
