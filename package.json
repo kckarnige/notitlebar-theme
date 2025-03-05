@@ -11,8 +11,8 @@
     "watch": "replugged build theme --watch",
     "bundle": "replugged bundle theme",
     "release": "replugged release",
-    "lint": "prettier ./ --check",
-    "lint:fix": "prettier ./ --write"
+    "lint": "prettier ./classicTitlebar.theme.css --check",
+    "lint:fix": "prettier ./classicTitlebar.theme.css --write"
   },
   "keywords": [],
   "author": "",
