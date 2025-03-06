@@ -32,7 +32,7 @@
 
 This theme has been tested on [Vesktop](https://github.com/Vencord/Vesktop/), [Equibop](https://github.com/Equicord/Equibop), [BetterDiscord](https://github.com/BetterDiscord/BetterDiscord), and [Replugged](https://github.com/replugged-org/replugged).
 
-This theme is incompatible with [Legcord](https://github.com/Legcord/Legcord), and will prevent itself from loading so it can still be imported and used in themes without any major compatibility issues.
+This theme is incompatible with [Legcord](https://github.com/Legcord/Legcord), and will prevent itself from loading so it can still be imported and used in themes without any worry about theme compatibility.
 
 > *I recommend pairing this with the [SettingsModal](https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/SettingsModal) theme addon by [DevilBro](https://github.com/mwittrien)!*
 
