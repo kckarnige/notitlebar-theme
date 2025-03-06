@@ -8,6 +8,8 @@
     <img width="60%" src="preview.png"></img>
 </p>
 
+----
+
 ### Obligatory Theme Import:
 
 <pre lang="css">
