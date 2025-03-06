@@ -39,7 +39,8 @@ This theme is incompatible with [Legcord](https://github.com/Legcord/Legcord), a
 ----
 
 ### Replugged Install:
-[Store Install](https://replugged.dev/install?identifier=com.kckarnige.classicTitlebar)     
+[Auto Install](https://replugged.dev/install?identifier=com.kckarnige.classicTitlebar)     
+[Store Page](https://replugged.dev/store/com.kckarnige.classicTitlebar)     
 [Theme File](https://github.com/kckarnige/notitlebar-theme/releases/latest/download/com.kckarnige.classicTitlebar.asar)
 
 ### Other Client Install:
