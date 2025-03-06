@@ -4,7 +4,7 @@
  * @authorId 634168893644210186
  * @authorLink https://github.com/kckarnige
  * @website https://github.com/kckarnige/notitlebar-theme
- * @version 1.0.7
+ * @version 1.1.1
  * @description A (sorta) blast from the past.
  * @donate https://ko-fi.com/kckarnige
  * @updateUrl https://raw.githubusercontent.com/kckarnige/notitlebar-theme/main/classicTitlebar.theme.css
@@ -94,6 +94,11 @@
 .platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_] {
   padding-right: 120px;
+}
+.platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_] [type*=button], .platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_] [role*=button],
+.platform-linux:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_] [type*=button],
+.platform-linux:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=toolbar_] [role*=button] {
+  -webkit-app-region: no-drag;
 }
 .platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=children_] [type*=button], .platform-win:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=children_] [role*=button],
 .platform-linux:not(:has([legcord-platform])) [class*=upperContainer_] > [class*=children_] [type*=button],
