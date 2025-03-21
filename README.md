@@ -13,7 +13,7 @@
 ### Obligatory Theme Import:
 
 <pre lang="css">
-    @import ("https://kckarnige.github.io/notitlebar-theme/classicTitlebar.theme.css");
+    @import url("https://kckarnige.github.io/notitlebar-theme/src/classicTitlebar.min.css");
 </pre>
 
 <h3>
@@ -46,4 +46,4 @@ This theme is incompatible with [Legcord](https://github.com/Legcord/Legcord), a
 [Theme File](https://github.com/kckarnige/notitlebar-theme/releases/latest/download/com.kckarnige.classicTitlebar.asar)
 
 ### Other Client Install:
-[Theme File](https://github.com/kckarnige/notitlebar-theme/blob/main/classicTitlebar.theme.css)
+[Theme File](https://github.com/kckarnige/notitlebar-theme/raw/main/classicTitlebar.theme.css)

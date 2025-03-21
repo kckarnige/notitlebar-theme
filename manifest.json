@@ -4,7 +4,7 @@
   "description": "A (sorta) blast from the past.",
   "author": [
     {
-      "name": "KCK",
+      "name": "KiCK",
       "discordID": "634168893644210186",
       "github": "kckarnige"
     }
@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "type": "replugged-theme",
-  "main": "classicTitlebar.theme.css",
+  "main": "src/classicTitlebar.min.css",
   "source": "https://github.com/kckarnige/notitlebar-theme",
   "image": [
     "https://i.imgur.com/eQTxT3K.png"
