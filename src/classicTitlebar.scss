@@ -1,91 +1,99 @@
 .platform-win,
 .platform-linux {
     &:not(:has([legcord-platform])) {
+        [class*=container_] {
+            >[class*=base_] {
+                margin-top: -36px;
 
-        nav[class*=guilds_] [class*=scroller_] {
-            padding-top: 12px;
-        }
+                // Titlebar
+                >[class*=bar_] {
+                    padding-top: 42px;
+                    z-index: 200;
+                    height: 0%;
+                    position: absolute;
+                    right: 0;
+                    float: right;
+                    pointer-events: none;
 
-        [class*=withFrame_][class*=titleBar_] {
-            height: 0%;
-            margin-top: 0px;
-            position: absolute;
-            right: 0;
-            float: right;
+                    >[class*=title_] {
+                        display: none;
+                    }
 
-            >[class*=wordmark_] {
-                display: none;
-            }
+                    >[class*=trailing_] {
+                        pointer-events: initial;
 
-            >[class*=winButton_] {
-                width: 40px;
-                height: 52px;
-                z-index: 100;
-            }
+                        >[class*=winButtons_] {
+                            >[class*=winButton_] {
+                                width: 40px;
+                                height: 50px;
+                            }
+                        }
+                    }
 
-            &:before {
-                width: calc(100vw - 384px);
-                height: 48px;
-                background: transparent;
-                opacity: .2;
-                content: " ";
-                -webkit-app-region: drag;
-                pointer-events: none;
-                position: absolute;
-            }
-        }
-        
-        [class*=content_] [class*=sidebar_] {
-            border-radius: 0;
-        }
-        
-        [class*=standardSidebarView_] {
-            [class*=contentColumnDefault_],
-            [class*=contentColumnWide_] {
-                padding: 20px 40px 80px;
-            }
-        }
-        
-        
-        [class*=topicClickTarget_],
-        [class*=notice_] {
-            height: 48px;
-            line-height: 48px;
-            button {
-                -webkit-app-region: none;
-                transform: translateY(-12px);
-                margin-top: 12px;
-                top: 12px;
-                margin-bottom: 12px;
-                bottom: 12px;
-                &[class*=back_] {
-                    transform: translateY(-6px);
+                    // Draggable Area
+                    &:before {
+                        right: 0;
+                        z-index: 200;
+                        width: calc(100vw - var(--custom-guild-sidebar-width));
+                        height: 48px;
+                        background: transparent; // Change me to see where I am
+                        opacity: .2;
+                        content: " ";
+                        -webkit-app-region: drag;
+                        pointer-events: none;
+                        position: absolute;
+                    }
                 }
-            }
-            [class*=closeButton_] {
-                top: 5px;
-                margin-right: 280px;
-            }
-        }
-        
-        [class*=sidebarRegionScroller_] {
-            padding-top: 14px;
-        }
-        
-        [class*=standardSidebarView_] [class*=contentRegion_] [class*=contentRegionScroller_] {
-            padding-top: 18px;
-        }
-        
-        [class*=upperContainer_] {
-            &>[class*=toolbar_] {
-                padding-right: 120px;
-                [type*=button], [role*=button] {
-                    -webkit-app-region: no-drag;
+
+                // Toolbar Spacing
+                [class*=upperContainer_] {
+
+                    >[class*=toolbar_] {
+                        z-index: 200;
+                        padding-right: 232px;
+
+                        >[type*=button],
+                        >[role*=button] {
+                            -webkit-app-region: no-drag;
+                        }
+                    }
+
+                    >[class*=children_] {
+
+                        [type*=button],
+                        [role*=button] {
+                            -webkit-app-region: no-drag;
+                        }
+                    }
                 }
-            }
-            &>[class*=children_] {
-                [type*=button], [role*=button] {
-                    -webkit-app-region: no-drag;
+
+                [class*=wrapper_][class*=guilds_] {
+                    padding-top: 12px;
+                }
+
+                // Top-side Alerts (Not Tested Yet)
+                [class*=topicClickTarget_],
+                [class*=notice_] {
+                    height: 48px;
+                    line-height: 48px;
+
+                    button {
+                        -webkit-app-region: none;
+                        transform: translateY(-12px);
+                        margin-top: 12px;
+                        top: 12px;
+                        margin-bottom: 12px;
+                        bottom: 12px;
+
+                        &[class*=back_] {
+                            transform: translateY(-6px);
+                        }
+                    }
+
+                    [class*=closeButton_] {
+                        top: 5px;
+                        margin-right: 280px;
+                    }
                 }
             }
         }
