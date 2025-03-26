@@ -19,6 +19,6 @@
   "main": "src/classicTitlebar.min.css",
   "source": "https://github.com/kckarnige/notitlebar-theme",
   "image": [
-    "https://i.imgur.com/eQTxT3K.png"
+    "https://raw.githubusercontent.com/kckarnige/notitlebar-theme/refs/heads/main/preview.png"
   ]
 }
