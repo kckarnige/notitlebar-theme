@@ -1,11 +1,11 @@
 <p align="center">
-    <img width="50%" src="./banner.png"></img>
+    <img width="50%" src="https://raw.githubusercontent.com/kckarnige/notitlebar-theme/refs/heads/main/banner.png"></img>
 </p>
 <h1 align="center">No Titlebar for Discord</h1>
 <p align="center"><i>A (sorta) blast from the past that gives you a little more room.</i></p>
 
 <p align="center">
-    <img width="60%" src="./preview.png"></img>
+    <img width="60%" src="https://raw.githubusercontent.com/kckarnige/notitlebar-theme/refs/heads/main/preview.png"></img>
 </p>
 
 ----
