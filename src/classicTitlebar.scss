@@ -1,98 +1,149 @@
+// Only function if running on desktop Windows or Linux
 .platform-win,
 .platform-linux {
+
+    // Disable if running on Legcord
     &:not(:has([legcord-platform])) {
-        [class*=container_] {
-            >[class*=base_] {
-                margin-top: -36px;
 
-                // Titlebar
-                >[class*=bar_] {
-                    padding-top: 42px;
-                    z-index: 200;
-                    height: 0%;
-                    position: absolute;
-                    right: 0;
-                    float: right;
-                    pointer-events: none;
+        [class*=appMount_] {
+            &:has([class*=chatLayerWrapper_]) {
 
-                    >[class*=title_] {
-                        display: none;
+                // Remove toolbar spacing when forum side page is open
+                [class*=upperContainer_] {
+
+                    >[class*=toolbar_] {
+                        padding-right: 0px !important;
+                    }
+                }
+            }
+
+            [class*=chatLayerWrapper_] {
+
+                // Flip toolbar in forum side page
+                [class*=upperContainer_] {
+
+                    >[class*=toolbar_] {
+                        flex-direction: row-reverse;
+                        position: absolute;
+                        float: left;
+                        left: 0
+                    }
+                }
+
+                // Size-down forum side page title
+                [class*=children_] {
+                    &:after {
+                        background: linear-gradient(90deg, rgba(54, 57, 63, 0) 0, var(--__header-bar-background));
+                        margin-right: 232px;
                     }
 
-                    >[class*=trailing_] {
-                        pointer-events: initial;
+                    [class*=titleWrapper_] {
+                        max-width: 100%;
+                        padding-right: 232px;
 
-                        >[class*=winButtons_] {
-                            >[class*=winButton_] {
-                                width: 40px;
-                                height: 50px;
+                        [class*=forumPostTitle_] {
+                            margin-left: 70px;
+                        }
+                    }
+                }
+            }
+
+            // Remove original titlebar spacing
+            [class*=container_] {
+                >[class*=base_] {
+                    margin-top: -36px;
+
+                    // Move titlebar features to the toolbar and function smoothly with the new draggable area
+                    >[class*=bar_] {
+                        padding-top: 42px;
+                        z-index: 200;
+                        height: 0%;
+                        position: absolute;
+                        right: 0;
+                        float: right;
+                        pointer-events: none;
+
+                        >[class*=title_] {
+                            display: none;
+                        }
+
+                        >[class*=trailing_] {
+                            pointer-events: initial;
+
+                            >[class*=winButtons_] {
+                                >[class*=winButton_] {
+                                    width: 40px;
+                                    height: 50px;
+                                }
+                            }
+                        }
+
+                        // Draggable area in question
+                        &:before {
+                            right: 0;
+                            z-index: 200;
+                            width: calc(100vw - var(--custom-guild-sidebar-width));
+                            height: 48px;
+                            background: transparent; // Change me to see where I am
+                            opacity: .2;
+                            content: " ";
+                            -webkit-app-region: drag;
+                            pointer-events: none;
+                            position: absolute;
+                        }
+                    }
+
+                    // Toolbar spacing for titlebar features
+                    :not([class*=chatLayerWrapper_]) {
+                        [class*=upperContainer_] {
+
+                            >[class*=toolbar_] {
+                                z-index: 200;
+                                padding-right: 232px;
+
+                                >[type*=button],
+                                >[role*=button] {
+                                    -webkit-app-region: no-drag;
+                                }
+                            }
+
+                            >[class*=children_] {
+
+                                [type*=button],
+                                [role*=button] {
+                                    -webkit-app-region: no-drag;
+                                }
                             }
                         }
                     }
 
-                    // Draggable Area
-                    &:before {
-                        right: 0;
-                        z-index: 200;
-                        width: calc(100vw - var(--custom-guild-sidebar-width));
+                    [class*=wrapper_][class*=guilds_] {
+                        padding-top: 12px;
+                    }
+
+                    // Top-side Alerts (Not Tested Yet)
+                    [class*=topicClickTarget_],
+                    [class*=notice_] {
                         height: 48px;
-                        background: transparent; // Change me to see where I am
-                        opacity: .2;
-                        content: " ";
-                        -webkit-app-region: drag;
-                        pointer-events: none;
-                        position: absolute;
-                    }
-                }
+                        line-height: 48px;
 
-                // Toolbar Spacing
-                [class*=upperContainer_] {
+                        button {
+                            -webkit-app-region: none;
+                            transform: translateY(-12px);
+                            margin-top: 12px;
+                            top: 12px;
+                            margin-bottom: 12px;
+                            bottom: 12px;
 
-                    >[class*=toolbar_] {
-                        z-index: 200;
-                        padding-right: 232px;
-
-                        >[type*=button],
-                        >[role*=button] {
-                            -webkit-app-region: no-drag;
+                            &[class*=back_] {
+                                transform: translateY(-6px);
+                            }
                         }
-                    }
 
-                    >[class*=children_] {
-
-                        [type*=button],
-                        [role*=button] {
-                            -webkit-app-region: no-drag;
+                        [class*=closeButton_] {
+                            top: 5px;
+                            margin-right: 280px;
                         }
-                    }
-                }
-
-                [class*=wrapper_][class*=guilds_] {
-                    padding-top: 12px;
-                }
-
-                // Top-side Alerts (Not Tested Yet)
-                [class*=topicClickTarget_],
-                [class*=notice_] {
-                    height: 48px;
-                    line-height: 48px;
-
-                    button {
-                        -webkit-app-region: none;
-                        transform: translateY(-12px);
-                        margin-top: 12px;
-                        top: 12px;
-                        margin-bottom: 12px;
-                        bottom: 12px;
-
-                        &[class*=back_] {
-                            transform: translateY(-6px);
-                        }
-                    }
-
-                    [class*=closeButton_] {
-                        top: 5px;
-                        margin-right: 280px;
                     }
                 }
             }
