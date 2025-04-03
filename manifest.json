@@ -9,7 +9,7 @@
       "github": "kckarnige"
     }
   ],
-  "version": "2.1.1",
+  "version": "2.1.2",
   "updater": {
     "type": "store",
     "id": "com.kckarnige.classicTitlebar"

@@ -1,6 +1,6 @@
 {
   "name": "replugged-notitlebar",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "None of this matters, this is just for building. This is straight from the template repo: replugged-org/theme-template",
   "engines": {
     "node": ">=20.0.0",
