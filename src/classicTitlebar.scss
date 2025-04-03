@@ -6,7 +6,8 @@
     &:not(:has([legcord-platform])) {
 
         [class*=appMount_] {
-            &:has([class*=chatTarget_][class*=container_][class*=notFloating_]) {
+            &:has([class*=chatTarget_][class*=container_][class*=notFloating_]),
+            &:has([class*=chatLayerWrapper_]) {
 
                 // Remove toolbar spacing when forum side page is open
                 [class*=upperContainer_] {

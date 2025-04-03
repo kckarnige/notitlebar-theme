@@ -1,5 +1,6 @@
-.platform-win:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_],
-.platform-linux:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_] {
+.platform-win:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_], .platform-win:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_],
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_],
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] {
   padding-right: 0px !important;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=chatLayerWrapper_] [class*=upperContainer_] > [class*=toolbar_],
