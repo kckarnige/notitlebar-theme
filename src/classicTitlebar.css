@@ -1,3 +1,13 @@
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_],
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_] {
+  pointer-events: initial;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_] > [class*=winButtons_] > [class*=winButton_],
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_] > [class*=winButtons_] > [class*=winButton_] {
+  margin-top: -3px;
+  width: 40px;
+  height: 50px;
+}
 .platform-win:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_], .platform-win:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] {
