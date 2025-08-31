@@ -77,7 +77,7 @@
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] {
   z-index: 200;
-  padding-right: 232px;
+  padding-right: 276px;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > [type*=button],
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > [role*=button],
