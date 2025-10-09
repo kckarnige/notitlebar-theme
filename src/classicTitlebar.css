@@ -1,3 +1,7 @@
+.platform-win:not(:has([legcord-platform])) :has([class=vc-betterFolders-sidebar]) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_]:before,
+.platform-linux:not(:has([legcord-platform])) :has([class=vc-betterFolders-sidebar]) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_]:before {
+  width: calc(100vw - var(--custom-guild-sidebar-width) - var(--guildbar-avatar-size) * 2 + var(--space-xs));
+}
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_] {
   pointer-events: initial;
@@ -76,20 +80,50 @@
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] {
+  --btn-count: 0;
   z-index: 200;
-  padding-right: 276px;
+  padding-right: calc(141px + (var(--space-12) + 2px + var(--space-32)) * 4);
+  position: relative;
 }
-.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > [type*=button],
-.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > [role*=button],
-.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > [type*=button],
-.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > [role*=button] {
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > :is([type*=button], [role*=button]),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_] > :is([type*=button], [role*=button]) {
   -webkit-app-region: no-drag;
 }
-.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=children_] [type*=button],
-.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=children_] [role*=button],
-.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=children_] [type*=button],
-.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=children_] [role*=button] {
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=children_] :is([type*=button], [role*=button]),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=children_] :is([type*=button], [role*=button]) {
   -webkit-app-region: no-drag;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(1 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(1 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 1;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(2 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(2 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 2;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(3 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(3 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 3;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(4 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(4 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 4;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(5 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(5 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 5;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(6 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(6 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 6;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(7 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(7 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 7;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(8 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))),
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=upperContainer_] [class*=toolbar_]:has(> :nth-child(8 of :is([type*=button], [role*=button])):nth-last-child(1 of :is([type*=button], [role*=button]))) {
+  --btn-count: 8;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] [class*=wrapper_][class*=guilds_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] [class*=wrapper_][class*=guilds_] {

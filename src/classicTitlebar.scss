@@ -2,9 +2,27 @@
 .platform-win,
 .platform-linux {
 
+    $button: ':is([type*="button"], [role*="button"])';
+
     // Disable if running on Legcord
     &:not(:has([legcord-platform])) {
 
+        // Adjust dragging area for the Better Folders Vencord plugin
+        :has([class="vc-betterFolders-sidebar"]) {
+            [class*=appMount_] {
+                [class*=container_] {
+                    >[class*=base_] {
+                        >[class*=bar_] {
+                            &:before {
+                                width: calc(100vw - var(--custom-guild-sidebar-width) - (var(--guildbar-avatar-size)* 2) + var(--space-xs));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Modal window buttons
         [class*=appMount_] {
             >[class*=bar_] {
                 >[class*=trailing_] {
@@ -113,20 +131,27 @@
                         [class*=upperContainer_] {
 
                             >[class*=toolbar_] {
+                                --btn-count: 0;
                                 z-index: 200;
-                                padding-right: 276px;
+                                padding-right: calc(141px + ((var(--space-12) + 2px + var(--space-32))*4));
+                                position: relative;
 
-                                >[type*=button],
-                                >[role*=button] {
+                                >#{$button} {
                                     -webkit-app-region: no-drag;
                                 }
                             }
 
                             >[class*=children_] {
 
-                                [type*=button],
-                                [role*=button] {
+                                #{$button} {
                                     -webkit-app-region: no-drag;
+                                }
+                            }
+
+                            // Repeat 8 times, there should be barely any plugins that add stuff up there
+                            @for $i from 1 through 8 {
+                                [class*=toolbar_]:has(> :nth-child(#{$i} of #{$button}):nth-last-child(1 of #{$button})) {
+                                    --btn-count: #{$i};
                                 }
                             }
                         }
