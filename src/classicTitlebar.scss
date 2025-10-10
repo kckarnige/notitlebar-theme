@@ -63,7 +63,7 @@
                             // Flip toolbar in forum sidebar
                             >[class*=toolbar_] {
                                 flex-direction: row-reverse;
-                                position: absolute;
+                                position: absolute !important;
                                 float: left;
                                 left: 0;
 
@@ -162,26 +162,24 @@
 
                     // Toolbar spacing for titlebar features
                     :not([class*=chatLayerWrapper_]) {
-                        >[class*=subtitleContainer_] {
-                            >[class*=container_] {
-                                >[class*=upperContainer_] {
+                        [class*=container_] {
+                            >[class*=upperContainer_] {
 
-                                    // And space the toolbar accordingly (Toolbar Space: Part 2/2)
-                                    >[class*=toolbar_] {
-                                        z-index: 200;
-                                        padding-right: calc((var(--ntb-winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
-                                        position: relative;
+                                // And space the toolbar accordingly (Toolbar Space: Part 2/2)
+                                >[class*=toolbar_] {
+                                    z-index: 200;
+                                    padding-right: calc((var(--ntb-winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
+                                    position: relative;
 
-                                        >#{$button} {
-                                            -webkit-app-region: no-drag;
-                                        }
+                                    >#{$button} {
+                                        -webkit-app-region: no-drag;
                                     }
+                                }
 
-                                    >[class*=children_] {
+                                >[class*=children_] {
 
-                                        #{$button} {
-                                            -webkit-app-region: no-drag;
-                                        }
+                                    #{$button} {
+                                        -webkit-app-region: no-drag;
                                     }
                                 }
                             }
