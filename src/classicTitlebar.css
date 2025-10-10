@@ -1,6 +1,6 @@
 :root {
-  --winButtonWidth: 32px;
-  --winButtonHeight: 50px;
+  --ntb-winButtonWidth: 32px;
+  --ntb-winButtonHeight: 50px;
 }
 
 .platform-win:not(:has([legcord-platform])) :has([class=vc-betterFolders-sidebar]) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_]:before,
@@ -14,8 +14,8 @@
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_] > [class*=winButtons_] > [class*=winButton_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] > [class*=bar_] > [class*=trailing_] > [class*=winButtons_] > [class*=winButton_] {
   margin-top: -3px;
-  width: var(--winButtonWidth);
-  height: var(--winButtonHeight);
+  width: var(--ntb-winButtonWidth);
+  height: var(--ntb-winButtonHeight);
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_], .platform-win:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatLayerWrapper_]) [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_]:has([class*=chatTarget_][class*=container_][class*=notFloating_]) [class*=upperContainer_] > [class*=toolbar_],
@@ -109,8 +109,8 @@
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] > [class*=trailing_] > [class*=winButtons_] > [class*=winButton_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] > [class*=trailing_] > [class*=winButtons_] > [class*=winButton_] {
-  width: var(--winButtonWidth);
-  height: var(--winButtonHeight);
+  width: var(--ntb-winButtonWidth);
+  height: var(--ntb-winButtonHeight);
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_]:before,
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_]:before {
@@ -128,7 +128,7 @@
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) > [class*=subtitleContainer_] > [class*=container_] > [class*=upperContainer_] > [class*=toolbar_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) > [class*=subtitleContainer_] > [class*=container_] > [class*=upperContainer_] > [class*=toolbar_] {
   z-index: 200;
-  padding-right: calc(var(--winButtonWidth) * 3 + var(--space-16) + (var(--space-6) + 2px + var(--space-32)) * var(--btn-count));
+  padding-right: calc(var(--ntb-winButtonWidth) * 3 + var(--space-16) + (var(--space-6) + 2px + var(--space-32)) * var(--btn-count));
   position: relative;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) > [class*=subtitleContainer_] > [class*=container_] > [class*=upperContainer_] > [class*=toolbar_] > :is(button, [class*=button_], [type*=button], [role*=button], a[href]):not([class*=winButton_]),

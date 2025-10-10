@@ -1,6 +1,6 @@
 :root {
-    --winButtonWidth: 32px; //  I personally think this looks best
-    --winButtonHeight: 50px; // Based on the height of the toolbar
+    --ntb-winButtonWidth: 32px; //  I personally think this looks best
+    --ntb-winButtonHeight: 50px; // Based on the height of the toolbar
 }
 
 // Only function if running on desktop Windows or Linux
@@ -36,8 +36,8 @@
                     >[class*=winButtons_] {
                         >[class*=winButton_] {
                             margin-top: -3px;
-                            width: var(--winButtonWidth);
-                            height: var(--winButtonHeight);
+                            width: var(--ntb-winButtonWidth);
+                            height: var(--ntb-winButtonHeight);
                         }
                     }
                 }
@@ -139,8 +139,8 @@
 
                             >[class*=winButtons_] {
                                 >[class*=winButton_] {
-                                    width: var(--winButtonWidth);
-                                    height: var(--winButtonHeight);
+                                    width: var(--ntb-winButtonWidth);
+                                    height: var(--ntb-winButtonHeight);
                                 }
                             }
                         }
@@ -169,7 +169,7 @@
                                     // And space the toolbar accordingly (Toolbar Space: Part 2/2)
                                     >[class*=toolbar_] {
                                         z-index: 200;
-                                        padding-right: calc((var(--winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
+                                        padding-right: calc((var(--ntb-winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
                                         position: relative;
 
                                         >#{$button} {
