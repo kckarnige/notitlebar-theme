@@ -11,7 +11,7 @@
     // Disable if running on Legcord
     &:not(:has([legcord-platform])) {
 
-        // Adjust dragging area for the Better Folders Vencord plugin
+        // Adjust dragging area for the "Better Folders" Vencord plugin
         :has([class="vc-betterFolders-sidebar"]) {
             [class*=appMount_] {
                 [class*=container_] {
@@ -56,31 +56,39 @@
             }
 
             [class*=chatLayerWrapper_] {
+                >[class*=container_] {
+                    >[class*=container_] {
+                        >[class*=upperContainer_] {
 
-                // Flip toolbar in forum side page
-                [class*=upperContainer_] {
+                            // Flip toolbar in forum sidebar
+                            >[class*=toolbar_] {
+                                flex-direction: row-reverse;
+                                position: absolute;
+                                float: left;
+                                left: 0;
 
-                    >[class*=toolbar_] {
-                        flex-direction: row-reverse;
-                        position: absolute;
-                        float: left;
-                        left: 0;
-                    }
-                }
+                                >[class*=iconWrapper_] {
+                                    width: var(--space-26);
+                                }
+                            }
 
-                // Size-down forum side page title
-                [class*=children_] {
-                    &:after {
-                        background: linear-gradient(90deg, rgba(54, 57, 63, 0) 0, var(--__header-bar-background));
-                        margin-right: 232px;
-                    }
 
-                    [class*=titleWrapper_] {
-                        max-width: 100%;
-                        padding-right: 232px;
+                            // Size-down forum sidebar title
+                            >[class*=children_] {
+                                &:after {
+                                    background: linear-gradient(90deg, rgba(54, 57, 63, 0) 0, var(--__header-bar-background));
+                                    margin-right: 232px;
+                                }
 
-                        [class*=forumPostTitle_] {
-                            margin-left: 70px;
+                                >[class*=titleWrapper_] {
+                                    max-width: 100%;
+                                    padding-right: 232px;
+
+                                    [class*=forumPostTitle_] {
+                                        margin-left: calc((var(--space-26)*2) + var(--space-12));
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -90,6 +98,16 @@
             [class*=container_] {
                 >[class*=base_] {
                     margin-top: -36px;
+
+                    >[class*=content_] {
+                        >[class*=sidebar_] {
+
+                            // Guild bar top spacing
+                            >[class*=wrapper_][class*=guilds_] {
+                                margin-top: 12px;
+                            }
+                        }
+                    }
 
                     // Get how many buttons (excluding window controls) are present on the titlebar normally (Toolbar Space: Part 1/2)
                     --btn-count: 1;
@@ -144,33 +162,33 @@
 
                     // Toolbar spacing for titlebar features
                     :not([class*=chatLayerWrapper_]) {
-                        [class*=upperContainer_] {
+                        >[class*=subtitleContainer_] {
+                            >[class*=container_] {
+                                >[class*=upperContainer_] {
 
-                            // And space the toolbar accordingly (Toolbar Space: Part 2/2)
-                            >[class*=toolbar_] {
-                                z-index: 200;
-                                padding-right: calc((var(--winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
-                                position: relative;
+                                    // And space the toolbar accordingly (Toolbar Space: Part 2/2)
+                                    >[class*=toolbar_] {
+                                        z-index: 200;
+                                        padding-right: calc((var(--winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
+                                        position: relative;
 
-                                >#{$button} {
-                                    -webkit-app-region: no-drag;
-                                }
-                            }
+                                        >#{$button} {
+                                            -webkit-app-region: no-drag;
+                                        }
+                                    }
 
-                            >[class*=children_] {
+                                    >[class*=children_] {
 
-                                #{$button} {
-                                    -webkit-app-region: no-drag;
+                                        #{$button} {
+                                            -webkit-app-region: no-drag;
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
 
-                    [class*=wrapper_][class*=guilds_] {
-                        padding-top: 12px;
-                    }
-
-                    // Top-side Alerts (Not Tested Yet)
+                    // Top-side Alerts
                     [class*=topicClickTarget_],
                     [class*=notice_] {
                         height: 48px;
