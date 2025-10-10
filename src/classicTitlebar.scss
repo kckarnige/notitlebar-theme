@@ -1,8 +1,12 @@
+:root {
+    --winButtonWidth: 40px; //  I personally think this looks best
+    --winButtonHeight: 50px; // Based on the height of the toolbar
+}
+
 // Only function if running on desktop Windows or Linux
 .platform-win,
 .platform-linux {
-
-    $button: ':is([type*="button"], [role*="button"])';
+    $button: ':is(button, [class*="button_"], [type*="button"], [role*="button"], a[href]):not([class*="winButton_"])';
 
     // Disable if running on Legcord
     &:not(:has([legcord-platform])) {
@@ -22,8 +26,9 @@
             }
         }
 
-        // Modal window buttons
         [class*=appMount_] {
+
+            // Window buttons for modals (because for some reason two sets of window controls exist?????)
             >[class*=bar_] {
                 >[class*=trailing_] {
                     pointer-events: initial;
@@ -31,8 +36,8 @@
                     >[class*=winButtons_] {
                         >[class*=winButton_] {
                             margin-top: -3px;
-                            width: 40px;
-                            height: 50px;
+                            width: var(--winButtonWidth);
+                            height: var(--winButtonHeight);
                         }
                     }
                 }
@@ -59,7 +64,7 @@
                         flex-direction: row-reverse;
                         position: absolute;
                         float: left;
-                        left: 0
+                        left: 0;
                     }
                 }
 
@@ -86,8 +91,18 @@
                 >[class*=base_] {
                     margin-top: -36px;
 
+                    // Get how many buttons (excluding window controls) are present on the titlebar normally (Toolbar Space: Part 1/2)
+                    --btn-count: 1;
+
+                    @for $i from 1 through 8 {
+                        &:has(> [class*=bar_] > [class*="trailing_"] > :nth-child(#{$i} of #{$button}):nth-last-child(1 of #{$button})) {
+                            --btn-count: #{$i};
+                        }
+                    }
+
                     // Move titlebar features to the toolbar and function smoothly with the new draggable area
                     >[class*=bar_] {
+
                         padding-top: 42px;
                         z-index: 200;
                         height: 0%;
@@ -102,11 +117,12 @@
 
                         >[class*=trailing_] {
                             pointer-events: initial;
+                            gap: var(--space-6);
 
                             >[class*=winButtons_] {
                                 >[class*=winButton_] {
-                                    width: 40px;
-                                    height: 50px;
+                                    width: var(--winButtonWidth);
+                                    height: var(--winButtonHeight);
                                 }
                             }
                         }
@@ -130,10 +146,10 @@
                     :not([class*=chatLayerWrapper_]) {
                         [class*=upperContainer_] {
 
+                            // And space the toolbar accordingly (Toolbar Space: Part 2/2)
                             >[class*=toolbar_] {
-                                --btn-count: 0;
                                 z-index: 200;
-                                padding-right: calc(141px + ((var(--space-12) + 2px + var(--space-32))*4));
+                                padding-right: calc((var(--winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
                                 position: relative;
 
                                 >#{$button} {
@@ -145,13 +161,6 @@
 
                                 #{$button} {
                                     -webkit-app-region: no-drag;
-                                }
-                            }
-
-                            // Repeat 8 times, there should be barely any plugins that add stuff up there
-                            @for $i from 1 through 8 {
-                                [class*=toolbar_]:has(> :nth-child(#{$i} of #{$button}):nth-last-child(1 of #{$button})) {
-                                    --btn-count: #{$i};
                                 }
                             }
                         }
@@ -168,7 +177,7 @@
                         line-height: 48px;
 
                         button {
-                            -webkit-app-region: none;
+                            -webkit-app-region: no-drag;
                             transform: translateY(-12px);
                             margin-top: 12px;
                             top: 12px;
