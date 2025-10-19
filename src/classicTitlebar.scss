@@ -1,11 +1,19 @@
 :root {
     --ntb-winButtonWidth: 32px; //  I personally think this looks best
     --ntb-winButtonHeight: 50px; // Based on the height of the toolbar
+    --ntb-win32-space: -8px;
+}
+
+.platform-win {
+    // !!!DON'T TOUCH THIS!!!
+    --ntb-win32-space: calc((var(--ntb-winButtonWidth) * 3));
+    // !!!DON'T TOUCH THIS!!!
 }
 
 // Only function if running on desktop Windows or Linux
 .platform-win,
-.platform-linux {
+.platform-linux,
+.platform-web {
     $button: ':is(button, [class*="button_"], [type*="button"], [role*="button"], a[href]):not([class*="winButton_"])';
 
     // Disable if running on Legcord
@@ -168,7 +176,7 @@
                                 // And space the toolbar accordingly (Toolbar Space: Part 2/2)
                                 >[class*=toolbar_] {
                                     z-index: 200;
-                                    padding-right: calc((var(--ntb-winButtonWidth) * 3) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
+                                    padding-right: calc(var(--ntb-win32-space) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
                                     position: relative;
 
                                     >#{$button} {
