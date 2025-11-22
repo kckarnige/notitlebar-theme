@@ -4,6 +4,10 @@
   --ntb-win32-space: -8px;
 }
 
+.platform-linux [class*=winButtonsWithDivider_] {
+  display: none;
+}
+
 .platform-win {
   --ntb-win32-space: calc((var(--ntb-winButtonWidth) * 3));
 }
