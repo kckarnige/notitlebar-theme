@@ -61,21 +61,25 @@
   max-width: 100%;
   padding-right: 232px;
 }
-.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=chatLayerWrapper_] > [class*=container_] > [class*=container_] > [class*=upperContainer_] > [class*=children_] > [class*=titleWrapper_] [class*=forumPostTitle_],
-.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=chatLayerWrapper_] > [class*=container_] > [class*=container_] > [class*=upperContainer_] > [class*=children_] > [class*=titleWrapper_] [class*=forumPostTitle_],
-.platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=chatLayerWrapper_] > [class*=container_] > [class*=container_] > [class*=upperContainer_] > [class*=children_] > [class*=titleWrapper_] [class*=forumPostTitle_] {
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=chatLayerWrapper_] > [class*=container_] > [class*=container_] > [class*=upperContainer_] > [class*=children_] > [class*=titleWrapper_] h2[class*=title_],
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=chatLayerWrapper_] > [class*=container_] > [class*=container_] > [class*=upperContainer_] > [class*=children_] > [class*=titleWrapper_] h2[class*=title_],
+.platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=chatLayerWrapper_] > [class*=container_] > [class*=container_] > [class*=upperContainer_] > [class*=children_] > [class*=titleWrapper_] h2[class*=title_] {
   margin-left: calc(var(--space-26) * 2 + var(--space-12));
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_],
 .platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] {
   margin-top: -36px;
-  --btn-count: 1;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=content_] > [class*=sidebar_] > [class*=wrapper_][class*=guilds_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=content_] > [class*=sidebar_] > [class*=wrapper_][class*=guilds_],
 .platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=content_] > [class*=sidebar_] > [class*=wrapper_][class*=guilds_] {
-  margin-top: 12px;
+  margin-top: 44px;
+}
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_],
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_],
+.platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] {
+  --btn-count: 1;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_]:has(> [class*=bar_] > [class*=trailing_] > :nth-child(1 of :is(button, [class*=button_], [type*=button], [role*=button], a[href]):not([class*=winButton_])):nth-last-child(1 of :is(button, [class*=button_], [type*=button], [role*=button], a[href]):not([class*=winButton_]))),
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_]:has(> [class*=bar_] > [class*=trailing_] > :nth-child(1 of :is(button, [class*=button_], [type*=button], [role*=button], a[href]):not([class*=winButton_])):nth-last-child(1 of :is(button, [class*=button_], [type*=button], [role*=button], a[href]):not([class*=winButton_]))),
@@ -128,6 +132,14 @@
   float: right;
   pointer-events: none;
 }
+.platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] [class*=backForwardButtons_],
+.platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] [class*=backForwardButtons_],
+.platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] [class*=backForwardButtons_] {
+  margin-top: -6px;
+  pointer-events: initial;
+  position: fixed;
+  left: 0;
+}
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] > [class*=title_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] > [class*=title_],
 .platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=bar_] > [class*=title_] {
@@ -163,7 +175,7 @@
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=container_] > [class*=upperContainer_] > [class*=toolbar_],
 .platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=container_] > [class*=upperContainer_] > [class*=toolbar_] {
   z-index: 200;
-  padding-right: calc(var(--ntb-win32-space) + var(--space-16) + (var(--space-6) + 2px + var(--space-32)) * var(--btn-count));
+  padding-right: calc(var(--ntb-win32-space) + var(--space-16) + (var(--space-6) + var(--space-12) + var(--space-32)) * var(--btn-count)) !important;
   position: relative;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] :not([class*=chatLayerWrapper_]) [class*=container_] > [class*=upperContainer_] > [class*=toolbar_] > :is(button, [class*=button_], [type*=button], [role*=button], a[href]):not([class*=winButton_]),

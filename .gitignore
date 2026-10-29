@@ -105,3 +105,4 @@ dist
 
 /bundle
 /.vscode
+pnpm-workspace.yaml

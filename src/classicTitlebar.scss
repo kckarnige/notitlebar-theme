@@ -98,7 +98,7 @@
                                     max-width: 100%;
                                     padding-right: 232px;
 
-                                    [class*=forumPostTitle_] {
+                                    h2[class*=title_] {
                                         margin-left: calc((var(--space-26)*2) + var(--space-12));
                                     }
                                 }
@@ -118,7 +118,7 @@
 
                             // Guild bar top spacing
                             >[class*=wrapper_][class*=guilds_] {
-                                margin-top: 12px;
+                                margin-top: 44px;
                             }
                         }
                     }
@@ -142,6 +142,13 @@
                         right: 0;
                         float: right;
                         pointer-events: none;
+
+                        [class*=backForwardButtons_] {
+                            margin-top: -6px;
+                            pointer-events: initial;
+                            position: fixed;
+                            left: 0;
+                        }
 
                         >[class*=title_] {
                             display: none;
@@ -182,7 +189,7 @@
                                 // And space the toolbar accordingly (Toolbar Space: Part 2/2)
                                 >[class*=toolbar_] {
                                     z-index: 200;
-                                    padding-right: calc(var(--ntb-win32-space) + var(--space-16) + ((var(--space-6) + 2px + var(--space-32))*var(--btn-count)));
+                                    padding-right: calc(var(--ntb-win32-space) + var(--space-16) + (var(--space-6) + var(--space-12) + var(--space-32)) * var(--btn-count)) !important;
                                     position: relative;
 
                                     >#{$button} {
