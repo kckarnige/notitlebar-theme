@@ -189,7 +189,7 @@
                                 // And space the toolbar accordingly (Toolbar Space: Part 2/2)
                                 >[class*=toolbar_] {
                                     z-index: 200;
-                                    padding-right: calc(var(--ntb-win32-space) + var(--space-16) + (var(--space-6) + var(--space-12) + var(--space-32)) * var(--btn-count)) !important;
+                                    margin-right: calc(var(--ntb-win32-space) + var(--space-16) + (var(--space-6) + var(--space-12) + var(--space-32)) * var(--btn-count)) !important;
                                     position: relative;
 
                                     >#{$button} {
