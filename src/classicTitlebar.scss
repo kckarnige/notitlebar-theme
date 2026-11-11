@@ -111,7 +111,7 @@
             // Remove original titlebar spacing
             [class*=container_] {
                 >[class*=base_] {
-                    margin-top: -36px;
+                    margin-top: -32px;
 
                     >[class*=content_] {
                         >[class*=sidebar_] {

@@ -69,7 +69,7 @@
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_],
 .platform-web:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] {
-  margin-top: -36px;
+  margin-top: -32px;
 }
 .platform-win:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=content_] > [class*=sidebar_] > [class*=wrapper_][class*=guilds_],
 .platform-linux:not(:has([legcord-platform])) [class*=appMount_] [class*=container_] > [class*=base_] > [class*=content_] > [class*=sidebar_] > [class*=wrapper_][class*=guilds_],
